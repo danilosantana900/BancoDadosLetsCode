@@ -7,11 +7,8 @@ BEGIN
     DECLARE @nome VARCHAR(100)
     DECLARE @telefone INT
     
-    SELECT @nome = Cliente.Nome 
-    FROM Cliente 
-    WHERE Codigo = @codigocliente
-    
-    SELECT @telefone = Cliente.Telefone 
+    SELECT @nome = Cliente.Nome, 
+           @telefone = Cliente.Telefone
     FROM Cliente 
     WHERE Codigo = @codigocliente
 
